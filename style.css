@@ -1,0 +1,144 @@
+/*Custome css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --Cyan: hsl(179, 62%, 43%);
+    --Cyan-opacity: hsla(179, 62%, 43%, 0.8);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    /* 
+### Neutral */
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--Light-Gray);
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+
+}
+
+.price_grid {
+
+
+
+    display: grid;
+    grid-auto-columns: 1fr;
+
+    grid-template-areas:
+        "one one"
+        "two three";
+
+    width: min(100%, 40rem);
+    margin-inline: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(106, 105, 105, 0.24);
+}
+
+.grid-box {
+    padding: 2.5rem;
+}
+
+.grid-box:nth-of-type(1) {
+    grid-area: one;
+    background-color: #fff;
+}
+
+
+
+.grid-box:nth-of-type(2) {
+    grid-area: two;
+    background-color: var(--Cyan);
+}
+
+.grid-box:nth-of-type(3) {
+    grid-area: three;
+    background-color: var(--Cyan-opacity);
+}
+
+.grid-box-heading {
+    font-size: 1.9em;
+    color: var(--Cyan);
+}
+
+.hilight {
+    margin: 20px 0px;
+
+    color: var(--Bright-Yellow);
+    font: 1.8em;
+    font-weight: 700;
+}
+
+.grid-para {
+    color: var(--Grayish-Blue);
+}
+
+.Subscription {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    color: var(--Light-Gray);
+    font-size: 14px;
+}
+
+.doller {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+button {
+    margin-top: 20px;
+    background-color: var(--Bright-Yellow);
+    border: none;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(106, 105, 105, 0.24);
+}
+
+.sub-para {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+@media (width <=768x) {
+    .price_grid {
+        grid-template-areas:
+            "one"
+            "two"
+            "three";
+
+        width: min(85%, 40rem);
+    }
+}
